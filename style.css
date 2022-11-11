@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+body {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background: linear-gradient(
+    90deg,
+    rgb(252, 153, 220) 22%,
+    rgba(255, 79, 112, 1) 100%
+  );
+}
+.hidden {
+  display: none;
+}
+nav {
+  grid-column: 1/4;
+  max-width: 400px;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+nav h1 {
+  font-weight: 700;
+  font-size: 1.75rem;
+  border: 2px solid white;
+  padding: 0.75rem;
+  margin: 1.3rem 0;
+  text-align: center;
+}
+nav h1:hover {
+  color: black;
+  border: 2px solid #a00090;
+  transition: all ease 0.2s;
+}
+nav ul {
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+}
+nav ul li {
+  cursor: pointer;
+  text-align: center;
+  color: black;
+  padding: 1.25rem;
+}
+nav ul li:hover {
+  background-color: #a00090;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+.Navbar__Link-img {
+  display: none;
+}
+main {
+  grid-column: 4/-1;
+  display: grid;
+  justify-items: center;
+}
+h1 {
+  grid-column: 1/-1;
+  margin: 2rem 0;
+  color: white;
+}
+section:first-of-type,
+section:nth-of-type(2) {
+  margin-bottom: 1rem;
+}
+section:first-of-type p,
+section:nth-of-type(2) form,
+section:nth-of-type(3) p {
+  padding: 1.5rem 1rem;
+}
+h2 {
+  padding: 0 1rem;
+}
+.enoncé {
+  grid-column: 1/-1;
+  width: 95%;
+  max-width: 1200px;
+}
+.enoncé h2 {
+  display: inline-block;
+  background-color: #ff6cf0;
+}
+.enoncé p {
+  width: 100%;
+  background-color: #fff;
+}
+.ex--demo {
+  background-color: #fff;
+  width: 95%;
+  max-width: 1200px;
+  grid-column: 1/-1;
+}
+.ex--demo h2 {
+  background-color: #ff6cf0;
+  display: inline-block;
+}
+.ex--demo form {
+  background-color: #fff;
+}
+#ex1--démo form {
+  background-color: #fff;
+  display: flex;
+  gap: 5px;
+  align-items: baseline;
+}
+.ex--demo form input[type="number"],
+.ex--demo form input[type="text"] {
+  width: 4rem;
+  padding: 0.25rem 0.5rem;
+  background-color: rgba(230, 57, 255, 0.4);
+  border: none;
+}
+.ex--demo form input[type="submit"],
+.ex--demo form input[type="button"],
+.ex--demo form button {
+  display: inline-block;
+  margin: 1rem 0;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  padding: 0.25rem 1rem;
+  border: none;
+}
+.ex--demo form input[type="submit"]:hover,
+.ex--demo form input[type="button"]:hover,
+.ex--demo form button:hover .ex--demo h2 {
+  background-color: #a00090;
+  transition: background-color 0.2s ease;
+}
+#ex1--error {
+  padding-left: 1rem;
+}
+.ex--source-code {
+  grid-column: 1/-1;
+  width: 95%;
+  max-width: 1200px;
+  margin-bottom: 1.25rem;
+}
+.ex--source-code h2 {
+  background-color: #ff6cf0;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+.ex--source-code pre {
+  background-color: #f1f1f1;
+  width: 100%;
+  padding: 1rem;
+  background-color: #f1f1f1;
+  font-size: 0.85rem;
+  padding: 2rem 0 2rem 1rem;
+}
+
+input[type="submit"] {
+  margin-left: 1.25rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  padding: 0.25rem 1rem;
+  border: none;
+}
+input[type="submit"]:hover {
+  background-color: #a00090;
+  transition: background-color 0.2s ease;
+}
+
+#ex1--delete:hover,
+#ex1--swap:hover {
+  background-color: #a00090;
+  transition: background-color 0.2s ease;
+}
+/* Valider une date */
+#ex2--démo form {
+  width: 100%;
+}
+#ex2--démo form input {
+  width: 15%;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-left: 0.25rem;
+}
+#ex2--démo form label {
+  display: inline-block;
+  width: 6%;
+}
+#ex2--démo form button:hover {
+  background-color: #a00090;
+  transition: background-color 0.2s ease;
+}
+/* Table de multiplication */
+#ex3--démo input[type="number"] {
+  margin-left: 1rem;
+}
+#ex3--result {
+  padding: 1rem;
+}
+/* Devine le nombre */
+#ex4--result {
+  padding-top: 1rem;
+}
+#ex4--submit {
+  margin: 0 0.5rem;
+  padding: 0.25rem 0.5rem;
+}
+#ex4--playAgain {
+  padding: 0.25rem 0.5rem;
+}
+/* Losange en étoiles */
+#ex5--result p {
+  font-family: "Space Mono", monospace;
+}
+/* Recherche et suppression dans une chaine */
+#ex__7 h1 {
+  font-size: 1.75rem;
+}
+#ex__7 form {
+  display: flex;
+  gap: 15px;
+  width: 70%;
+}
+
+#ex7--infoInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#ex7--infoInput div input {
+  width: 100%;
+}
+#ex7--démo--btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 5px;
+}
+#ex7--searchBtn {
+  margin: 0.25rem 0 0 0;
+  padding: 0.25rem;
+}
+#ex7--deleteBtn {
+  margin: 0.95rem 0 0 0;
+  padding: 0.25rem;
+}
+#ex7--searchBtn:hover,
+#ex7--deleteBtn:hover {
+  background-color: #a00090;
+  transition: background-color 0.2s ease;
+}
+#result,
+#newSentence {
+  width: 70%;
+  background-color: #d9d9d9;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem;
+}
+/* Rechercher dans un tableau*/
+#result10 {
+  padding-top: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+/* Compter le nombre de voyelles dans une chaine */
+#ex__9 h1 {
+  font-size: 1.5rem;
+}
+#ex9--input {
+  width: 10rem;
+}
+@media screen and (max-width: 800px) {
+  * {
+    font-size: 0.9rem;
+  }
+  h1 {
+    text-align: center;
+  }
+  nav {
+    grid-column: 1/-1;
+    position: static;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    max-width: 100%;
+  }
+  nav h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    border: none;
+    padding: 0.5rem;
+    margin: 1rem 0;
+  }
+  main {
+    grid-column: 1/-1;
+  }
+  .Navbar__Link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .Navbar__Link h1 {
+    margin: 1rem auto;
+  }
+  .navbar__list {
+    display: none;
+  }
+  .Navbar__Toggle {
+    display: flex;
+  }
+  .Navbar__Link-img {
+    display: inline-block;
+    position: fixed;
+    right: 0.9rem;
+  }
+}
+@media screen and (max-width: 440px) {
+  * {
+    font-size: 0.75rem;
+  }
+}

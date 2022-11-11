@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/c1f4059a23.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <div class="Navbar__Link Navbar__Link-toggle">
+        <h1>JS WORKSHOP</h1>
+        <img
+          src="navBtn.jpg"
+          alt="navbar toggle button"
+          width="25px"
+          height="25px"
+          class="Navbar__Link-img"
+        />
+      </div>
+      <ul class="navbar__list">
+        <li class="list-item" data-tab="1">Permutation de deux nombres</li>
+        <li class="list-item" data-tab="2">Valider une date</li>
+        <li class="list-item" data-tab="3">Table de multiplication</li>
+        <li class="list-item" data-tab="4">Devine le nombre</li>
+        <li class="list-item" data-tab="5">Losange en étoiles</li>
+        <li class="list-item" data-tab="6">Calculatrice</li>
+        <li class="list-item" data-tab="7">
+          Recherche et suppression dans une chaine
+        </li>
+        <li class="list-item" data-tab="8">Tri d’un tableau</li>
+        <li class="list-item" data-tab="9">
+          Compter le nombre de voyelles dans une chaine
+        </li>
+        <li class="list-item" data-tab="10">Recherche dans un tableau</li>
+      </ul>
+    </nav>
+    <main id="ex__1">
+      <h1>Permutation de deux nombres</h1>
+      <section class="enoncé">
+        <h2>Enoncé</h2>
+        <p>Ecrire un script qui permute deux nombres saisis dans deux inputs</p>
+      </section>
+      <section id="ex1--démo" class="ex--demo">
+        <h2>Démo</h2>
+        <form>
+          <label for="ex1--number__1">Nombre 1:</label>
+          <input id="ex1--number__1" type="number" />
+          <input id="ex1--swap" type="submit" value="Swap" />
+          <label for="ex1--number__2">Nombre 2:</label>
+          <input id="ex1--number__2" type="number" />
+          <button id="ex1--delete">Delete</button>
+        </form>
+        <div id="ex1--error"></div>
+      </section>
+      <section id="ex1--source-code" class="ex--source-code">
+        <h2>Code source</h2>
+      </section>
+    </main>
+    <main id="ex__2" class="hidden">
+      <h1>Valider une date</h1>
+      <section class="enoncé">
+        <h2>Enoncé</h2>
+        <p>
+          Ecrire un script qui permet de saisir les trois champs d’une date
+          (jour, mois et année) et d’indiquer si la date est correcte ou non
+        </p>
+      </section>
+      <section id="ex2--démo" class="ex--demo">
+        <h2>Démo</h2>
+        <form>
+          <div id="day">
+            <label for="ex2--day">Jour:</label>
+            <input id="ex2--day" type="number" />
+          </div>
+          <div id="month">
+            <label for="ex2--month">Mois:</label>
+            <input id="ex2--month" type="number" />
+          </div>
+          <div id="year">
+            <label for="ex2--year">Year:</label>
+            <input id="ex2--year" type="number" />
+          </div>
+          <button id="ex2--validate">Valider</button>
+          <p id="ex2--result"></p>
+        </form>
+      </section>
+      <section id="ex2--source-code" class="ex--source-code">
+        <h2>Code source</h2>
+      </section>
+    </main>
+    <main id="ex__3" class="hidden">
+      <h1>Table de multiplication</h1>
+      <section class="enoncé">
+        <h2>Enoncé</h2>
+        <p>
+          Afficher la table de multiplication d’un nombre saisi par
+          l’utilisateur dans un input.
+        </p>
+      </section>
+      <section id="ex3--démo" class="ex--demo">
+        <h2>Démo</h2>
+        <input type="number" id="ex3--input" />
+        <input type="submit" id="ex3--submit" value="Générer la table" />
+        <div id="ex3--result"></div>
+      </section>
+      <section id="ex3--source-code" class="ex--source-code">
+        <h2>Code source</h2>
+        <pre class="hidden" onclick="removeHidden()">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, aut. Fugit consequuntur odit hic qui, eligendi ullam blanditiis saepe laboriosam. Eos aspernatur, provident neque in nostrum obcaecati error eum dolorem.
+    </pre
+        >
+      </section>
+    </main>
+    <main id="ex__4" class="hidden">
+      <h1>Devine le nombre !</h1>
+      <section class="enoncé">
+        <h2>Enoncé</h2>
+        <p>
+          L’utilisateur doit deviner un nombre entre 1 et 50 que le programme a
+          choisi aléatoirement en 10 tentatives. Quand l’utilisateur entre une
+          valeur, on lui affiche le nombre de tentatives restantes, ainsi qu’un
+          message indiquant si sa réponse est correcte ou pas.
+        </p>
+      </section>
+      <section id="ex4--démo" class="ex--demo">
+        <h2>Démo</h2>
+        <form>
+          <p>Tentatives restantes: <span>10/10</span></p>
+          <input type="number" id="ex4--input" />
+          <input type="submit" id="ex4--submit" value="Guess" />
+          <input type="button" id="ex4--playAgain" value="Play Again" />
+          <p id="ex4--result"></p>
+        </form>
+      </section>
+      <section id="ex4--source-code" class="ex--source-code">
+        <h2>Code source</h2>
+      </section>
+    </main>
+    <main id="ex__5" class="hidden">
+      <h1>Losange en étoiles</h1>
+      <section class="enoncé">
+        <h2>Enoncé</h2>
+        <p>
+          Ce programme a pour objectif de dessiner un losange en étoiles dont la
+          longueur des diagonales est un nombre impair saisi par l’utilsateur.
+          Dans le cas où l’utilisateur entre un nombre pair, il faut afficher
+          une erreur.
+        </p>
+      </section>
+      <section id="ex5--démo" class="ex--demo">
+        <h2>Démo</h2>
+        <form>
+          <label for="">Saisir la longueur des diagonales </label>
+          <input type="number" id="ex5--input" />
+          <input type="submit" id="ex5--submit" />
+          <div id="ex5--result"><p></p></div>
+        </form>
+      </section>
+      <section id="ex5--source-code" class="ex--source-code">
+        <h2>Code source</h2>
+        <pre>
+const swapBtn = document.getElementById("ex1--swap");
+const ex1Form = document.querySelector("#ex1--démo form");
+const deteleNums = document.querySelector("#ex1--delete");
+swapBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  let number1 = document.getElementById("ex1--number__1").value;
+  let number2 = document.getElementById("ex1--number__2").value;
+  const temp = number1;
+  number1 = number2;
+  number2 = temp;
+  document.getElementById("ex1--number__1").value = number1;
+  document.getElementById("ex1--number__2").value = number2;
+});
+deteleNums.addEventListener("click", (e) => {
+  document.getElementById("ex1--number__1").value = "";
+  document.getElementById("ex1--number__2").value = "";
+});
+          </pre
+        >
+      </section>
+    </main>
+    <main id="ex__6" class="hidden">
+      <h1>Calculatrice</h1>
+      <section class="enoncé">
+        <h2>Enoncé</h2>
+        <p>
+          Créez 4 fonctions Javascript (Somme, Soustraction, Division,
+          Multiplication). L’utilisateur saisie deux nombres dans deux inputs,
+          choisi ensuite une opération arithmétique. Le résultat est donné par
+          l’une des 4 fonctions Javascript.
+        </p>
+      </section>
+      <section id="ex6--démo" class="ex--demo">
+        <h2>Démo</h2>
+        <form>
+          <input type="number" id="ex6--num1" />
+          <input type="number" id="ex6--num2" />
+          <input type="button" id="ex6--addition" value="+" />
+          <input type="button" id="ex6--substraction" value="-" />
+          <input type="button" id="ex6--multiplication" value="*" />
+          <input type="button" id="ex6--dividing" value="/" />
+          <input type="number" id="ex6--result" />
+          <input type="button" id="ex6--delete" value="delete" />
+        </form>
+      </section>
+      <section id="ex6--source-code" class="ex--source-code">
+        <h2>Code source</h2>
+        <pre>
+const swapBtn = document.getElementById("ex1--swap");
+const ex1Form = document.querySelector("#ex1--démo form");
+const deteleNums = document.querySelector("#ex1--delete");
+swapBtn.addEventListener("click", (e) => {
+e.preventDefault();
+let number1 = document.getElementById("ex1--number__1")
+.value;
+let number2 = document.getElementById("ex1--number__2")
+.value;
+const temp = number1;
+number1 = number2;
+number2 = temp;
+document.getElementById("ex1--number__1").value = number1;
+document.getElementById("ex1--number__2").value = number2;
+});
+deteleNums.addEventListener("click", (e) => {
+  document.getElementById("ex1--number__1").value = "";
+  document.getElementById("ex1--number__2").value = "";
+});
+          </pre
+        >
+      </section>
+    </main>
+    <main id="ex__7" class="hidden">
+      <h1>Recherche et suppression dans une chaine</h1>
+      <section class="enoncé">
+        <h2>Enoncé</h2>
+        <p>
+          Ecrire un programme Javascript qui demande à l’utilisateur de saisir
+          une phrase dans une zone de texte et un mot dans une autre zone de
+          texte. Le clique sur le bouton rechercher affiche un message si le mot
+          existe dans la phrase ou non. Le clique sur le bouton supprimer permet
+          d’effacer toutes les occurrence du mot dans la phrase ( si le mot
+          existe bien sûr).
+        </p>
+      </section>
+      <section id="ex7--démo" class="ex--demo">
+        <h2>Démo</h2>
+        <form>
+          <div id="ex7--infoInput">
+            <div>
+              <label for="ex7--sentence">Saisir une phrase</label>
+              <input type="text" id="ex7--sentence" />
+            </div>
+            <div>
+              <label for="word"
+                >Saisir le mot à rechercher ou à supprimer</label
+              >
+              <input type="text" id="ex7--word" />
+            </div>
+          </div>
+          <div id="ex7--démo--btns">
+            <button id="ex7--searchBtn">Rechercher</button>
+            <button id="ex7--deleteBtn">Supprimer les occurences</button>
+          </div>
+        </form>
+        <p id="result">
+          Le message de recherche s’affiche ici Ou la nouvelle phrase après la
+          suppression des occurences
+        </p>
+        <p id="newSentence"></p>
+      </section>
+      <section id="ex7--source-code" class="ex--source-code">
+        <h2>Code source</h2>
+        <pre>
+ const searchBtn = document.querySelector("#ex7--searchBtn");
+ const deleteBtn = document.querySelector("#ex7--deleteBtn");
+ let searchingResult, arrSentence, word;
+ searchBtn.addEventListener("click", (e) => {
+e.preventDefault();
+const sentence = document.querySelector("#ex7--sentence").value;
+word = document.querySelector("#ex7--word").value.trim();
+const result = document.querySelector("#result");
+arrSentence = sentence.split(" ");
+searchingResult = arrSentence.includes(word);
+if (searchingResult) result.innerHTML = "Found It";
+else result.innerHTML = "Didn't found It";
+console.log(arrSentence);
+ });
+ deleteBtn.addEventListener("click", (e) => {
+const newSentence = document.querySelector("#newSentence");
+e.preventDefault();
+if (searchingResult) {
+  const deletedWord = arrSentence.splice(arrSentence.indexOf(wo1);
+  newSentence.innerHTML = arrSentence.join(" ");
+}
+ });
+   </pre
+        >
+      </section>
+    </main>
+    <main id="ex__8" class="hidden">
+      <h1>Tri d’un tableau</h1>
+      <section class="enoncé">
+        <h2>Enoncé</h2>
+        <p>
+          Ecrire un programme Javascript qui permet de calculer le nombre de
+          voyelles (a,e,i,o,u,y) dans une phrase saisie par l’utilisateur
+        </p>
+      </section>
+      <section id="ex8--démo" class="ex--demo">
+        <h2>Démo</h2>
+        <form>
+          <label for="ex8--number">Donner la taille du tableau</label>
+          <input type="number" id="ex8--number" />
+          <input type="submit" id="tableBtn" value="Valider" />
+          <label>Veuiller remplir le tableau</label>
+          <div id="ex8--inputs">
+            <button id="ex8--sortBtn">Trier</button>
+          </div>
+          <div id="ex8--sorted"></div>
+        </form>
+      </section>
+      <section id="ex8--source-code" class="ex--source-code">
+        <h2>Code source</h2>
+        <pre>
+const tableBtn = document.querySelector("#tableBtn");
+const inputs = document.querySelector("#ex8--inputs");
+let sortArr = (inputArr) => {
+let len = inputArr.length;
+let checked;
+do {
+checked = false;
+for (let i = 1; i <= len; i++) {
+if (inputArr[i - 1] > inputArr[i]) {
+let tmp = inputArr[i];
+inputArr[i - 1] = inputArr[i];
+inputArr[i] = tmp;
+checked = true;
+}
+}
+} while (checked);
+return inputArr;
+};
+let userNum;
+tableBtn.addEventListener("click", (e) => {
+e.preventDefault();
+userNum = document.querySelector("#ex8--number").value;
+for (let i = 0; i < userNum; i++) {
+const createdInput = document.createElement("input");
+createdInput.setAttribute("type", "number");
+createdInput.className = "ex8--input";
+inputs.appendChild(createdInput);
+}
+});
+const sortBtn = document.querySelector("#ex8--sortBtn");
+sortBtn.addEventListener("click", (e) => {
+e.preventDefault();
+const enteredInputs = document.querySelectorAll
+("#ex8--inputs input");
+const sortedArr = [];
+enteredInputs.forEach((ele) => {
+sortedArr.push(ele.value);
+});
+console.log(sortedArr);
+sortArr(sortedArr);
+console.log(sortedArr);
+const sortedInputs = document.querySelector("#ex8--sorted");
+for (let i = 0; i < userNum; i++) {
+const createdInput = document.createElement("input");
+createdInput.setAttribute("type", "number");
+createdInput.value = sortedArr[i];
+sortedInputs.append(createdInput);
+}
+});
+            </pre
+        >
+      </section>
+    </main>
+    <main id="ex__9" class="hidden">
+      <h1>Compter le nombre de voyelles dans une chaine</h1>
+      <section class="enoncé">
+        <h2>Enoncé</h2>
+        <p>
+          Ecrire un programme Javascript qui permet de trier un tableau d’entier
+          (Utiliser n’importe quel algorithme de tri mais surtout pas la
+          fonction Sort de l’objet Array). L’utilisateur commence tout d’abord
+          par saisir la taille du tableau, ensuite il remplit le tableau pour
+          cliquer à la fin sur un bouton trier : celui-ci affichera le tableau
+          en ordre croissant ou décroissant.
+        </p>
+      </section>
+      <section id="ex9--démo" class="ex--demo">
+        <h2>Démo</h2>
+        <form>
+          <label for="ex9--input">Saisir une phrase</label>
+          <input type="text" id="ex9--input" />
+          <input
+            type="submit"
+            value="Compter le nombre de voyelles"
+            id="ex9--search"
+          />
+          <p id="ex9--result"></p>
+        </form>
+      </section>
+      <section id="ex9--source-code" class="ex--source-code">
+        <h2>Code source</h2>
+        <pre>
+const swapBtn = document.getElementById("ex1--swap");
+const ex1Form = document.querySelector("#ex1--démo form");
+const deteleNums = document.querySelector("#ex1--delete");
+swapBtn.addEventListener("click", (e) => {
+e.preventDefault();
+let number1 = document.getElementById("ex1--number__1").value;
+let number2 = document.getElementById("ex1--number__2").value;
+const temp = number1;
+number1 = number2;
+number2 = temp;
+document.getElementById("ex1--number__1").value = number1;
+document.getElementById("ex1--number__2").value = number2;
+});
+deteleNums.addEventListener("click", (e) => {
+  document.getElementById("ex1--number__1").value = "";
+  document.getElementById("ex1--number__2").value = "";
+});
+          </pre
+        >
+      </section>
+    </main>
+    <main id="ex__10" class="hidden">
+      <h1>Recherche dans un tableau</h1>
+      <section class="enoncé">
+        <h2>Enoncé</h2>
+        <p>
+          Ecrire un programme Javascript qui permet de rechercher une valeur
+          dans un tableau d’entier. L’utilisateur doit suivre les étapes
+          suivantes : 1. Saisir la taille du tableau, 2. Remplir le tableau par
+          des entiers 3. Introduire la valeur à rechercher 4. Cliquer sur le
+          boutons « Rechercher » Le programme affiche ensuite un message si la
+          valeur à rechercher existe ou non dans le tableau.
+        </p>
+      </section>
+      <section id="ex10--démo" class="ex--demo">
+        <h2>Démo</h2>
+        <form>
+          <label for="ex10--number">Donner la taille du tableau</label>
+          <input type="number" id="ex10--number" />
+          <input type="submit" id="tableBtn10" value="Submit" />
+          <label>Donner la valeur à rechercher dans le tableau</label>
+          <input type="number" id="searchThis10" />
+          <input type="submit" value="search" id="searchEx10" />
+          <div id="ex10--inputs"></div>
+          <p id="result10"></p>
+        </form>
+      </section>
+      <section id="ex10--source-code" class="ex--source-code">
+        <h2>Code source</h2>
+        <pre>
+const swapBtn = document.getElementById("ex1--swap");
+const ex1Form = document.querySelector("#ex1--démo form");
+const deteleNums = document.querySelector("#ex1--delete");
+swapBtn.addEventListener("click", (e) => {
+e.preventDefault();
+let number1 = document.getElementById("ex1--number__1").value;
+let number2 = document.getElementById("ex1--number__2").value;
+const temp = number1;
+number1 = number2;
+number2 = temp;
+document.getElementById("ex1--number__1").value = number1;
+document.getElementById("ex1--number__2").value = number2;
+});
+deteleNums.addEventListener("click", (e) => {
+  document.getElementById("ex1--number__1").value = "";
+  document.getElementById("ex1--number__2").value = "";
+});
+          </pre
+        >
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
