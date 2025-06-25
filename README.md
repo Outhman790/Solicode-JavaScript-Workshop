@@ -1,28 +1,97 @@
-# SOLICODE-Brief4
+💻 Solicode JavaScript Workshop
 
+📘 Project Overview
 
+This repository contains a small educational website aimed at practicing core JavaScript concepts. The page features a side navigation bar listing several exercises. Selecting one reveals:
 
-Project Name:
+🧹 A short statement
 
-Solicode JavaScript Workshop
+🧪 A demo area
 
-Project Context:
+💡 The JavaScript code used to solve the task
 
-Web development is based on three pillars: HTML, CSS, and JavaScript. JavaScript, due to its dynamism, versatility, flexibility, popularity, and accessibility, is among the most sought-after web languages in the job market. To help you get started with JavaScript, we propose the development of a responsive educational website that allows you to master the basics of structured programming and web development using JavaScript through various exercises provided in the attachments.
+The goal of this project is to help beginners learn fundamental programming structures—such as variables, conditions, loops, arrays, and functions—through interactive examples. The design is fully responsive and works on both desktop and mobile browsers.
 
-The application will consist of a left-side menu (with sub-menus) and a main block divided into three sections: one for the exercise statement, a second to simulate the solution, and a third to write the JavaScript script. The menu covers the following chapters:
+🧠 Available Exercises
 
-    Variables and Assignments
-    Conditions
-    Loops
-        The "for" loop
-        The "while" loop
-        Nested loops
-    Strings
-        Search and removal
-        Counting vowels
-    Arrays
-        Sorting
-        Searching
-    Functions
+The application currently includes the following demos:
 
+🔄 Permutation de deux nombres – Swap the values of two inputs
+
+📅 Valider une date – Check if a day/month/year combination forms a valid date
+
+✖️ Table de multiplication – Display the multiplication table of a selected number
+
+🎯 Devine le nombre – Simple number guessing game (1–50)
+
+🔷 Losange en étoiles – Draw a diamond of stars based on chosen size
+
+🧮 Calculatrice – Perform basic arithmetic on two numbers
+
+🧹 Recherche et suppression dans une chaîne – Search for and optionally remove a word from a sentence
+
+📊 Tri d’un tableau – Sort an array of numbers without using Array.sort
+
+🐡 Compter le nombre de voyelles – Count the vowels in a sentence
+
+🔍 Recherche dans un tableau – Look for a specific value inside an array
+
+Each exercise dynamically displays the JavaScript code snippet used to perform the solution.
+
+🚀 Running the Project
+
+No extra dependencies or build tools are required. Simply open index.html in a modern web browser.
+
+# From the repository root
+open index.html   # or double-click the file in a file explorer
+
+📁 Folder Structure
+
+index.html   # 🧱 Main HTML page containing exercises
+style.css    # 🎨 Page styling
+script.js    # ⚙️ JavaScript logic for menu and exercises
+navBtn.jpg   # 📸 Icon used for the mobile navigation toggle
+
+🏫 Project Context
+
+This workshop is part of Solicode's introductory JavaScript course. Through hands-on experimentation with small code challenges, learners strengthen their understanding of:
+
+💡 Structured programming
+
+🧠 Core JavaScript logic
+
+🔥 DOM manipulation
+
+🌐 Basic web development practices
+
+📚 Learning Goals
+
+This project allows learners to:
+
+📈 Master Programming Fundamentals
+
+Understand and apply variables, loops, conditions, and functions
+
+Practice logic and syntax fluency through examples
+
+🔧 Strengthen JavaScript Skills
+
+Work with DOM manipulation techniques
+
+Use event listeners and input handling
+
+Implement pure JS problem-solving without frameworks
+
+🏠 Build Responsive Interfaces
+
+Create layout-aware, interactive HTML+CSS structures
+
+Implement toggles and sticky components for mobile and desktop
+
+💡 Develop Debugging Intuition
+
+Read and analyze JavaScript snippets
+
+Learn how to structure, test, and fix logic errors
+
+🌟 A great project to reinforce core JavaScript while building something visual and interactive!
